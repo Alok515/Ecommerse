@@ -1,0 +1,11 @@
+GET http://localhost:8000/products
+
+###
+
+POST http://localhost:8000/products/create
+Content-Type: application/json
+
+{
+    "name": "this data is handy handle food",
+    "quantity": 45
+}
