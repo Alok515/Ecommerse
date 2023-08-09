@@ -47,7 +47,11 @@ Welcome to the E-commerce API project repository! This project aims to provide a
    npm start
    ```
 
-   The server will start on `http://localhost:8000` by default. You can configure the port in the `.env` file.
+   The server will start on `http://localhost:8000` by default. You can configure the port in the `.env` file and setup the database url as.
+   ```
+   PORT: your server port
+   DataBase: your database-server url
+   ```
 
 ## API Endpoints
 
@@ -124,10 +128,10 @@ Welcome to the E-commerce API project repository! This project aims to provide a
         "name": "laptop",
         "quantity": 35,
         "__v": 0
-      }
-    },
-    "message": "updated successfully"
-  }
+      },
+      "message": "updated successfully"
+    }
+  } 
   ```
 
 ## Usage
