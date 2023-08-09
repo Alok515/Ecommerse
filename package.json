@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@alec016/mongoose-autoincrement": "^1.5.1",
     "express": "^4.18.2",
     "mongoose": "^7.4.2"
   },
