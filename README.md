@@ -26,13 +26,13 @@ Welcome to the E-commerce API project repository! This project aims to provide a
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone 
+   git clone https://github.com/Alok515/Ecommerse.git 
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd e-commerce-api
+   cd Ecommerse
    ```
 
 3. Install project dependencies:
