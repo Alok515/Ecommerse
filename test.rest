@@ -1,11 +1,19 @@
-GET http://localhost:8000/products
+GET http://localhost:8000/v1/products
 
 ###
 
-POST http://localhost:8000/products/create
+POST http://localhost:8000/v1/products/create
 Content-Type: application/json
 
 {
-    "name": "this data is handy handle food",
+    "name": "mobile",
     "quantity": 45
 }
+
+###
+
+delete http://localhost:8000/v1/products/64d332dcb4593d65775638f5
+
+###
+
+put http://localhost:8000/v1/products/64d3338db4593d65775638fb/update_quantity/?number=-20
