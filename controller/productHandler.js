@@ -52,7 +52,7 @@ const updateProduct = async (req, res) => {
         if (productToUpdate) {
             productToUpdate.quantity += quantityToUpdateInt;
             await productToUpdate.save();
-            return res.status(200).json({data: productToUpdate, message: 'updated successfully'});
+            return res.status(200).json({data: {product: productToUpdate}, message: 'updated successfully'});
         }
         else {
             return res.status(400).json({data: {message: 'Product not found with that id'}});

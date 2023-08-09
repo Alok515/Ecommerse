@@ -51,11 +51,9 @@ Welcome to the E-commerce API project repository! This project aims to provide a
 
 ## API Endpoints
 
-- **RootUrl** `http://localhost:8000/v1`
-
 ### Add a New Product
 
-- **Endpoint:** `POST /products/create` 
+- **Endpoint:** `POST /v1/products/create` 
 - **Request Payload:**
 
   ```json
@@ -74,59 +72,61 @@ Welcome to the E-commerce API project repository! This project aims to provide a
       "id": "product_id",
       "name": "laptop",
       "quantity": 10
-    }
+      }
     }
   }
   ```
 
 ### Retrieve All Products
 
-- **Endpoint:** `GET /products`
-- **Response:**
-
-  ```json
-  [
-    {
-      "id": "product_id",
-      "name": "laptop",
-      "quantity": 10
-    },
-    // ... other products
-  ]
-  ```
-
-### Delete a Product
-
-- **Endpoint:** `DELETE /products/:id`
+- **Endpoint:** `GET /v1/products`
 - **Response:**
 
   ```json
   {
-    "message": "Product deleted successfully"
+    "data": {
+      "products": [
+        {
+          "_id": "product_id",
+          "name": "mobile",
+          "quantity": 205,
+          "__v": 0
+        },
+        //other data
+      ]
+    }
+  }
+  ```
+
+### Delete a Product
+
+- **Endpoint:** `DELETE /v1/products/:id`
+- **Response:**
+
+  ```json
+  {
+    "data": {
+      "message": "Product deleted"
+    }
   }
   ```
 
 ### Update Product Quantity
 
-- **Endpoint:** `PUT /products/:id/update_quantity`
-- **Request Payload:**
-
-  ```json
-  {
-    "quantity": 20
-  }
-  ```
-
+- **Endpoint:** `PUT /products/:id/update_quantity/?number=25`
 - **Response:**
 
   ```json
   {
-    "message": "Product quantity updated successfully",
-    "product": {
-      "id": "product_id",
-      "name": "laptop",
-      "quantity": 20
-    }
+    "data": {
+      "product": {
+        "_id": "product_id",
+        "name": "laptop",
+        "quantity": 35,
+        "__v": 0
+      }
+    },
+    "message": "updated successfully"
   }
   ```
 
